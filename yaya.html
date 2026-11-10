@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+  <title>
+   Yasmin Ferreira Possiano | Currículo
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+   :root {
+  --bg:#fff4f8;
+  --surface:#ffffff;
+  --ink:#3b1a2c;
+  --muted:#7d5b6c;
+  --line:#fbd3e3;
+  --rose:#e0407f;
+  --pink:#ffc7dc;
+  --blush:#ffe6ef;
+  --lav:#e9d9ff;
+  --peach:#ffd9c2;
+  --shadow:rgba(224,64,127,.16);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#241320;
+    --surface:#321a2d;
+    --ink:#ffeaf3;
+    --muted:#e2b8cc;
+    --line:#5a2b49;
+    --rose:#ff78a9;
+    --pink:#5a2b49;
+    --blush:#41203a;
+    --lav:#3d2a5c;
+    --peach:#5a3340;
+    --shadow:rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"] {
+  --bg:#241320;
+  --surface:#321a2d;
+  --ink:#ffeaf3;
+  --muted:#e2b8cc;
+  --line:#5a2b49;
+  --rose:#ff78a9;
+  --pink:#5a2b49;
+  --blush:#41203a;
+  --lav:#3d2a5c;
+  --peach:#5a3340;
+  --shadow:rgba(0,0,0,.3);
+}
+* {
+  box-sizing:border-box;
+}
+html {
+  scroll-padding-top:env(safe-area-inset-top,0px);
+  scroll-behavior:smooth;
+}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:400 17px/1.6 "DM Sans",system-ui,sans-serif;
+  overflow-x:hidden;
+}
+h1,h2,h3 {
+  font-family:"Bricolage Grotesque","DM Sans",sans-serif;
+  line-height:1.1;
+  margin:0;
+}
+a {
+  color:inherit;
+}
+:focus-visible {
+  outline:3px solid var(--rose);
+  outline-offset:3px;
+  border-radius:10px;
+}
+#bar {
+  position:fixed;
+  top:0;
+  left:0;
+  height:4px;
+  width:0;
+  background:linear-gradient(90deg,#ff9cc2,var(--rose));
+  z-index:50;
+}
+.blob {
+  position:fixed;
+  border-radius:50%;
+  filter:blur(70px);
+  opacity:.55;
+  pointer-events:none;
+  z-index:0;
+  transition:transform .8s ease-out;
+}
+.b1 {
+  width:340px;
+  height:340px;
+  background:var(--pink);
+  top:-90px;
+  right:-70px;
+}
+.b2 {
+  width:300px;
+  height:300px;
+  background:var(--lav);
+  bottom:-80px;
+  left:-80px;
+}
+.wrap {
+  position:relative;
+  z-index:1;
+  max-width:1040px;
+  margin:0 auto;
+  padding:0 20px;
+}
+header.top {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
+.logo {
+  font:800 22px "Bricolage Grotesque",sans-serif;
+  color:var(--rose);
+}
+.btn {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  border:2px solid var(--rose);
+  background:var(--surface);
+  color:var(--rose);
+  padding:10px 18px;
+  border-radius:999px;
+  font:700 15px "DM Sans",sans-serif;
+  text-decoration:none;
+  cursor:pointer;
+  transition:transform .15s,box-shadow .15s;
+}
+.btn:hover {
+  transform:translateY(-3px);
+  box-shadow:0 8px 0 var(--shadow);
+}
+.btn.main {
+  background:var(--rose);
+  color:#fff;
+}
+.btn.small {
+  padding:7px 14px;
+  font-size:14px;
+}
+.hero {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:36px;
+  align-items:center;
+  padding:20px 0 40px;
+}
+.hero h1 {
+  font-size:clamp(42px,7vw,78px);
+  font-weight:800;
+  letter-spacing:-.03em;
+}
+.hero h1 span {
+  color:var(--rose);
+}
+.role {
+  font:700 clamp(19px,2.6vw,25px) "Bricolage Grotesque",sans-serif;
+  margin:18px 0 8px;
+  min-height:1.5em;
+}
+.role b {
+  color:var(--rose);
+}
+.role i {
+  display:inline-block;
+  width:3px;
+  height:1em;
+  background:var(--rose);
+  margin-left:3px;
+  vertical-align:-3px;
+  animation:bl 1s steps(2) infinite;
+}
+@keyframes bl {
+  50% {
+    opacity:0;
+  }
+}
+.lead {
+  color:var(--muted);
+  font-size:19px;
+  max-width:30em;
+  margin:0 0 24px;
+}
+.cta {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.photo {
+  position:relative;
+  justify-self:center;
+  width:min(310px,80%);
+  perspective:700px;
+}
+.frame {
+  position:relative;
+  transition:transform .15s;
+}
+.frame::before {
+  content:"";
+  position:absolute;
+  inset:-14px;
+  border:3px dashed var(--rose);
+  border-radius:50%;
+  opacity:.5;
+  animation:spin 40s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform:rotate(360deg);
+  }
+}
+.photo label {
+  display:grid;
+  place-items:center;
+  aspect-ratio:1;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ff9cc2,#ffd0e2 55%,#e9d9ff);
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+  border:6px solid var(--surface);
+  box-shadow:0 18px 40px var(--shadow);
+}
+.photo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  inset:0;
+}
+.photo .ini {
+  font:800 90px "Bricolage Grotesque",sans-serif;
+  color:#fff;
+  text-shadow:0 4px 0 rgba(224,64,127,.35);
+}
+.photo input {
+  position:absolute;
+  opacity:0;
+  width:1px;
+  height:1px;
+}
+.photo small {
+  display:block;
+  text-align:center;
+  color:var(--muted);
+  margin-top:18px;
+  font-size:14px;
+}
+.sticker {
+  position:absolute;
+  background:var(--surface);
+  color:var(--rose);
+  font-weight:800;
+  padding:8px 14px;
+  border-radius:14px;
+  font-size:14px;
+  transform:rotate(-6deg);
+  right:-12px;
+  bottom:46px;
+  box-shadow:0 6px 0 var(--shadow);
+  border:2px solid var(--rose);
+}
+.heart {
+  position:fixed;
+  pointer-events:none;
+  z-index:60;
+  font-size:22px;
+  animation:fly 1.4s ease-out forwards;
+}
+@keyframes fly {
+  to {
+    transform:translate(var(--dx),-170px) scale(1.5);
+    opacity:0;
+  }
+}
+.stats {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px;
+  margin-bottom:40px;
+}
+.stat {
+  background:var(--surface);
+  border:2px solid var(--line);
+  border-radius:22px;
+  padding:16px 18px;
+  text-align:center;
+}
+.stat b {
+  display:block;
+  font:800 40px "Bricolage Grotesque",sans-serif;
+  color:var(--rose);
+  line-height:1;
+}
+.stat span {
+  color:var(--muted);
+  font-size:15px;
+}
+nav.tabs {
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:6px 0 14px;
+  position:sticky;
+  top:env(safe-area-inset-top,0px);
+  background:var(--bg);
+  z-index:5;
+}
+nav.tabs button {
+  flex:none;
+  border:2px solid var(--line);
+  background:var(--surface);
+  color:var(--ink);
+  padding:9px 18px;
+  border-radius:999px;
+  font:700 15px "DM Sans",sans-serif;
+  cursor:pointer;
+  transition:transform .15s;
+}
+nav.tabs button:hover {
+  transform:translateY(-2px);
+}
+nav.tabs button[aria-selected="true"] {
+  background:var(--rose);
+  color:#fff;
+  border-color:var(--rose);
+}
+.panel {
+  display:none;
+  padding:18px 0 56px;
+  animation:in .4s;
+}
+.panel.on {
+  display:block;
+}
+@keyframes in {
+  from {
+    opacity:0;
+    transform:translateY(12px);
+  }
+  to {
+    opacity:1;
+    transform:none;
+  }
+}
+.panel h2 {
+  font-size:clamp(28px,4vw,40px);
+  margin-bottom:22px;
+}
+.hint {
+  color:var(--muted);
+  margin:-10px 0 18px;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:16px;
+}
+.card {
+  background:var(--surface);
+  border:2px solid var(--line);
+  border-radius:24px;
+  padding:22px;
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.card:hover {
+  transform:translateY(-4px);
+  box-shadow:0 12px 0 var(--shadow);
+  border-color:var(--rose);
+}
+.card h3 {
+  font-size:21px;
+  margin-bottom:6px;
+}
+.meta {
+  color:var(--muted);
+  font-size:15px;
+}
+.badge {
+  display:inline-block;
+  background:var(--pink);
+  color:var(--ink);
+  font-weight:800;
+  font-size:13px;
+  padding:3px 12px;
+  border-radius:999px;
+  margin-top:10px;
+}
+.badge.g {
+  background:var(--rose);
+  color:#fff;
+}
+.tog {
+  cursor:pointer;
+  text-align:left;
+  font:inherit;
+  color:inherit;
+  width:100%;
+}
+.tog .more {
+  display:none;
+  margin-top:12px;
+  color:var(--muted);
+}
+.tog[aria-expanded="true"] .more {
+  display:block;
+  animation:in .3s;
+}
+.tog .plus {
+  float:right;
+  font:800 26px "Bricolage Grotesque";
+  color:var(--rose);
+  transition:transform .2s;
+  line-height:1;
+}
+.tog[aria-expanded="true"] .plus {
+  transform:rotate(45deg);
+}
+.chips {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:22px;
+}
+.chip {
+  border:2px solid var(--rose);
+  background:var(--surface);
+  color:var(--rose);
+  padding:9px 18px;
+  border-radius:999px;
+  font:700 15px "DM Sans";
+  cursor:pointer;
+  transition:transform .15s;
+}
+.chip:hover {
+  transform:scale(1.06) rotate(-2deg);
+}
+.chip[aria-pressed="true"] {
+  background:var(--rose);
+  color:#fff;
+}
+#skillinfo {
+  min-height:72px;
+  background:var(--blush);
+  border-radius:20px;
+  padding:16px 20px;
+  color:var(--ink);
+  font-size:18px;
+}
+.soft {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+  margin-top:22px;
+}
+.soft button {
+  background:var(--blush);
+  border:2px solid transparent;
+  border-radius:18px;
+  padding:14px 16px;
+  font:700 16px "DM Sans";
+  color:var(--ink);
+  text-align:left;
+  cursor:pointer;
+  transition:transform .2s,background .2s;
+}
+.soft button:hover {
+  transform:rotate(-1.5deg) scale(1.03);
+  background:var(--pink);
+}
+.tl {
+  border-left:4px solid var(--pink);
+  margin-left:8px;
+  padding-left:24px;
+  display:grid;
+  gap:20px;
+}
+.tl .card {
+  position:relative;
+}
+.tl .card::before {
+  content:"";
+  position:absolute;
+  left:-37px;
+  top:28px;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:var(--rose);
+  border:4px solid var(--bg);
+}
+.tl ul {
+  margin:12px 0 0;
+  padding-left:20px;
+}
+.tl li {
+  margin:4px 0;
+}
+.cert {
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+.cert b {
+  flex:none;
+  width:48px;
+  height:48px;
+  border-radius:16px;
+  background:var(--blush);
+  display:grid;
+  place-items:center;
+  font-size:24px;
+}
+.cert h3 {
+  font-size:18px;
+}
+footer {
+  border-top:2px dashed var(--line);
+  padding:36px 0 60px;
+}
+footer h2 {
+  font-size:clamp(28px,4vw,44px);
+}
+footer .row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+#toast {
+  position:fixed;
+  left:50%;
+  bottom:calc(24px + env(safe-area-inset-bottom,0px));
+  transform:translate(-50%,30px);
+  background:var(--ink);
+  color:var(--bg);
+  padding:10px 20px;
+  border-radius:999px;
+  font-weight:700;
+  opacity:0;
+  transition:.3s;
+  z-index:70;
+  pointer-events:none;
+}
+#toast.on {
+  opacity:1;
+  transform:translate(-50%,0);
+}
+@media(max-width:760px) {
+  .hero {
+    grid-template-columns:1fr;
+  }
+  .photo {
+    order:-1;
+    width:min(230px,62%);
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  * {
+    animation:none!important;
+    transition:none!important;
+    scroll-behavior:auto!important;
+  }
+}
+@media print {
+  header.top,nav.tabs,.photo small,.cta,.blob,#bar {
+    display:none;
+  }
+  .panel {
+    display:block!important;
+    padding:10px 0;
+  }
+  body {
+    background:#fff;
+    color:#000;
+  }
+}
+  </style>
+ </head>
+ <body>
+  <div id="bar">
+  </div>
+  <div class="blob b1" id="b1">
+  </div>
+  <div class="blob b2" id="b2">
+  </div>
+  <div class="wrap">
+   <header class="top">
+    <div class="logo">
+     Yasmin Ferreira ♡
+    </div>
+    <div style="display:flex;gap:8px">
+     <button aria-label="Alternar tema claro e escuro" class="btn small" id="theme">
+      🌗 Tema
+     </button>
+     <button class="btn small" onclick="window.print()">
+      Salvar em PDF
+     </button>
+    </div>
+   </header>
+   <section class="hero">
+    <div>
+     <h1>
+      Oi, eu sou a
+      <span>
+       Yasmin
+      </span>
+      Ferreira
+     </h1>
+     <div class="role">
+      Eu curto
+      <b id="word">
+      </b>
+      <i>
+      </i>
+     </div>
+     <p class="lead">
+      Estudante de Ciência de Dados no SENAI e Jovem Aprendiz na GreenTech. Este é o meu currículo, feito para você me conheçer e explorar sobre minhas habilidades!.
+     </p>
+     <div class="cta">
+      <a class="btn main" href="https://wa.me/5511987956446" rel="noopener" target="_blank">
+       Chamar no WhatsApp
+      </a>
+      <button class="btn" id="copy">
+       Copiar e-mail
+      </button>
+      <a class="btn" href="https://www.linkedin.com/in/yasmin-ferreira-possiano/" rel="noopener" target="_blank">
+       LinkedIn
+      </a>
+     </div>
+    </div>
+    <div class="photo">
+     <div class="frame" id="frame">
+      <label title="Clique para colocar sua foto">
+       <span class="ini" id="ini">
+        YP
+       </span>
+       <img id="pic" src="foto.jpeg" alt="Foto da Yasmin">
+       <input accept="image/*" aria-label="Escolher foto" id="file" type="file"/>
+      </label>
+      <span class="sticker">
+       Diadema – SP
+      </span>
+     </div>
+    </div>
+   </section>
+   <section aria-label="Resumo em números" class="stats">
+    <div class="stat">
+     <b data-n="2">
+      0
+     </b>
+     <span>
+      cursos superior e técnico
+     </span>
+    </div>
+    <div class="stat">
+     <b data-n="3">
+      0
+     </b>
+     <span>
+      projetos
+     </span>
+    </div>
+    <div class="stat">
+     <b data-n="5">
+      0
+     </b>
+     <span>
+      certificações
+     </span>
+    </div>
+    <div class="stat">
+     <b data-n="2">
+      0
+     </b>
+     <span>
+      experiências
+     </span>
+    </div>
+   </section>
+   <nav aria-label="Seções do currículo" class="tabs" role="tablist">
+    <button aria-selected="true" data-t="sobre" role="tab">
+     Sobre mim
+    </button>
+    <button aria-selected="false" data-t="exp" role="tab">
+     Experiência
+    </button>
+    <button aria-selected="false" data-t="form" role="tab">
+     Formação
+    </button>
+    <button aria-selected="false" data-t="proj" role="tab">
+     Projetos
+    </button>
+    <button aria-selected="false" data-t="hab" role="tab">
+     Habilidades
+    </button>
+    <button aria-selected="false" data-t="cur" role="tab">
+     Cursos
+    </button>
+   </nav>
+   <section class="panel on" id="sobre">
+    <h2>
+     Sobre mim
+    </h2>
+    <div class="grid">
+     <div class="card">
+      <h3>
+       Agora
+      </h3>
+      <p>
+       Jovem Aprendiz na GreenTech, na área administrativa e financeira, e aluna de Ciência de Dados no SENAI São Caetano do Sul.
+      </p>
+     </div>
+     <div class="card">
+      <h3>
+       Meu jeito
+      </h3>
+      <p>
+       Gosto de trabalhar em equipe, organizar processos e aprender coisas novas, sempre com proatividade e cooperação.
+      </p>
+     </div>
+     <div class="card">
+      <h3>
+       Contato
+      </h3>
+      <p>
+       (11) 98795-6446 (celular)
+       <br/>
+       (11) 4092-1922 (telefone)
+       <br/>
+       yasminpossiano68@gmail.com
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="panel" id="exp">
+    <h2>
+     Experiência profissional
+    </h2>
+    <p class="hint">
+     Toque em uma experiência para ver as atividades.
+    </p>
+    <div class="tl">
+     <button aria-expanded="true" class="card tog">
+      <span class="plus">
+       +
+      </span>
+      <h3>
+       Jovem Aprendiz | GreenTech
+      </h3>
+      <div class="meta">
+       Área Administrativa e Financeira | Instituto ITEMM | Atual até fev/2028
+      </div>
+      <span class="badge g">
+       Atual
+      </span>
+      <div class="more">
+       <ul>
+        <li>
+         Conferência e arquivamento de notas fiscais de entrada
+        </li>
+        <li>
+         Arquivamento e emissão de notas fiscais de saída
+        </li>
+        <li>
+         Revisão de relatórios de despesas
+        </li>
+        <li>
+         Organização e controle de documentos fiscais da empresa
+        </li>
+        <li>
+         Apoio às atividades da Diretoria Administrativa e Financeira
+        </li>
+       </ul>
+       <p>
+        Contratada pela GreenTech por meio do Instituto ITEMM, que une formação teórica e prática na empresa.
+       </p>
+       <p>
+        <b>
+         Jornada:
+        </b>
+        seg, ter, qui e sex, das 10h00 às 16h15, na GreenTech. Quarta, das 13h00 às 17h00, formação no Instituto ITEMM.
+       </p>
+      </div>
+     </button>
+     <button aria-expanded="false" class="card tog">
+      <span class="plus">
+       +
+      </span>
+      <h3>
+       Atendente / Recepcionista | Pizzaria Fluxo
+      </h3>
+      <div class="meta">
+       Jul/2023 a ago/2025
+      </div>
+      <div class="more">
+       <ul>
+        <li>
+         Atendimento ao cliente presencial e por telefone
+        </li>
+        <li>
+         Apresentação de produtos e suporte ao cliente
+        </li>
+        <li>
+         Organização de estoque e do ambiente
+        </li>
+        <li>
+         Apoio nas rotinas operacionais do estabelecimento
+        </li>
+       </ul>
+      </div>
+     </button>
+    </div>
+   </section>
+   <section class="panel" id="form">
+    <h2>
+     Formação acadêmica
+    </h2>
+    <div class="grid">
+     <div class="card">
+      <h3>
+       Tecnólogo em Ciência de Dados
+      </h3>
+      <div class="meta">
+       SENAI São Caetano do Sul, Escola SENAI “Paulo Antonio Skaf”
+      </div>
+      <span class="badge g">
+       2026 a 2027 (previsto)
+      </span>
+     </div>
+     <div class="card">
+      <h3>
+       Técnico em Desenvolvimento de Sistemas
+      </h3>
+      <div class="meta">
+       SENAI Manuel Garcia Filho
+      </div>
+      <span class="badge">
+       2024 a 2025
+      </span>
+     </div>
+    </div>
+   </section>
+   <section class="panel" id="proj">
+    <h2>
+     Projetos
+    </h2>
+    <p class="hint">
+     Toque em um projeto para ver os detalhes.
+    </p>
+    <div class="grid">
+     <button aria-expanded="false" class="card tog">
+      <span class="plus">
+       +
+      </span>
+      <h3>
+       CTI Brasil
+      </h3>
+      <div class="meta">
+       Operadora de internet, Diadema
+      </div>
+      <div class="more">
+       Parceria do SENAI com a empresa CTI, focada em propor soluções inovadoras e melhorias para o setor de vendas.
+      </div>
+     </button>
+     <button aria-expanded="false" class="card tog">
+      <span class="plus">
+       +
+      </span>
+      <h3>
+       Desafio de Ideias
+      </h3>
+      <div class="meta">
+       SENAI Diadema
+      </div>
+      <span class="badge g">
+       🥉 3º lugar
+      </span>
+      <div class="more">
+       Análise e desenvolvimento de solução para um problema apresentado pela empresa Universo Tintas. A ideia proposta ficou em terceiro lugar.
+      </div>
+     </button>
+     <button aria-expanded="false" class="card tog">
+      <span class="plus">
+       +
+      </span>
+      <h3>
+       Projeto REMAMA
+      </h3>
+      <div class="meta">
+       Programa REMAMA | Ciência de Dados
+      </div>
+      <div class="more">
+       Projeto em parceria com o programa REMAMA para a criação de um sistema web, com foco em Ciência de Dados.
+      </div>
+     </button>
+    </div>
+   </section>
+   <section class="panel" id="hab">
+    <h2>
+     Habilidades
+    </h2>
+    <p class="hint">
+     Clique em uma ferramenta para ver como eu uso.
+    </p>
+    <div class="chips">
+     <button aria-pressed="false" class="chip" data-i="Python: a linguagem que uso para aprender análise de dados e lógica de programação.">
+      Python
+     </button>
+     <button aria-pressed="false" class="chip" data-i="JavaScript: uso para criar páginas e sistemas web.">
+      JavaScript
+     </button>
+     <button aria-pressed="false" class="chip" data-i="GitHub: guardo meus códigos e trabalho em equipe com versionamento.">
+      GitHub
+     </button>
+     <button aria-pressed="false" class="chip" data-i="Trello: organizo as tarefas do squad em quadros, do planejamento à entrega.">
+      Trello
+     </button>
+     <button aria-pressed="false" class="chip" data-i="Metodologias ágeis: trabalho em ciclos curtos, com entregas e feedback frequentes.">
+      Metodologias Ágeis
+     </button>
+    </div>
+    <div id="skillinfo">
+     Escolha uma habilidade acima.
+    </div>
+    <div class="soft">
+     <button>
+      🗂️ Organização e gestão de documentos
+     </button>
+     <button>
+      💬 Comunicação interpessoal
+     </button>
+     <button>
+      🔍 Atenção aos detalhes
+     </button>
+     <button>
+      🤝 Trabalho em equipe
+     </button>
+     <button>
+      🚀 Proatividade e iniciativa
+     </button>
+     <button>
+      ✅ Responsabilidade e comprometimento
+     </button>
+     <button>
+      ⏰ Gestão do tempo
+     </button>
+     <button>
+      🧠 Pensamento analítico
+     </button>
+     <button>
+      🌱 Facilidade de aprendizagem
+     </button>
+     <button>
+      🧾 Rotinas administrativas e fiscais
+     </button>
+     <button>
+      🔄 Adaptação a mudanças
+     </button>
+     <button>
+      📊 Interesse em tecnologia e análise de dados
+     </button>
+    </div>
+   </section>
+   <section class="panel" id="cur">
+    <h2>
+     Qualificações e cursos
+    </h2>
+    <div class="grid">
+     <div class="card cert">
+      <b>
+       🤖
+      </b>
+      <div>
+       <h3>
+        Fundamentos da Inteligência Artificial
+       </h3>
+       <div class="meta">
+        SENAI
+       </div>
+      </div>
+     </div>
+     <div class="card cert">
+      <b>
+       ☁️
+      </b>
+      <div>
+       <h3>
+        Microsoft DP-900
+       </h3>
+       <div class="meta">
+        Implantação e análise de dados em nuvem | SENAI
+       </div>
+      </div>
+     </div>
+     <div class="card cert">
+      <b>
+       🌱
+      </b>
+      <div>
+       <h3>
+        ESG
+       </h3>
+       <div class="meta">
+        Sustentabilidade corporativa | SENAI
+       </div>
+      </div>
+     </div>
+     <div class="card cert">
+      <b>
+       🔒
+      </b>
+      <div>
+       <h3>
+        LGPD
+       </h3>
+       <div class="meta">
+        Privacidade e proteção de dados | SENAI
+       </div>
+      </div>
+     </div>
+     <div class="card cert">
+      <b>
+       🌐
+      </b>
+      <div>
+       <h3>
+        Conceitos Básicos de Redes
+       </h3>
+       <div class="meta">
+        Networking Academy, programa Cisco Networking Academy | Cisco
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <footer>
+    <h2>
+     Vamos conversar?
+    </h2>
+    <div class="row">
+     <a class="btn main" href="https://wa.me/5511987956446" rel="noopener" target="_blank">
+      WhatsApp (11) 98795-6446
+     </a>
+     <a class="btn" href="tel:+551140921922">
+      (11) 4092-1922
+     </a>
+     <a class="btn" href="mailto:yasminpossiano68@gmail.com">
+      yasminpossiano68@gmail.com
+     </a>
+     <a class="btn" href="https://www.linkedin.com/in/yasmin-ferreira-possiano/" rel="noopener" target="_blank">
+      LinkedIn
+     </a>
+    </div>
+   </footer>
+  </div>
+  <div id="toast" role="status">
+  </div>
+  <script>
+   var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function toast(t){var e=document.getElementById('toast');e.textContent=t;e.classList.add('on');setTimeout(function(){e.classList.remove('on')},1800)}
+
+// Abas
+var tabs=document.querySelectorAll('nav.tabs button');
+function openTab(id){
+  tabs.forEach(function(b){b.setAttribute('aria-selected',b.dataset.t===id)});
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('on',p.id===id)});
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+}
+tabs.forEach(function(b){b.addEventListener('click',function(){openTab(b.dataset.t)})});
+var h=location.hash.slice(1);if(h&&document.getElementById(h))openTab(h);
+
+// Cartões que abrem
+document.querySelectorAll('.tog').forEach(function(c){
+  c.addEventListener('click',function(){c.setAttribute('aria-expanded',c.getAttribute('aria-expanded')!=='true')});
+});
+
+// Habilidades
+var info=document.getElementById('skillinfo');
+document.querySelectorAll('.chip').forEach(function(c){
+  c.addEventListener('click',function(){
+    document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    c.setAttribute('aria-pressed','true');info.textContent=c.dataset.i;
+  });
+});
+document.querySelectorAll('.soft button').forEach(function(b){b.addEventListener('click',function(){hearts(b.getBoundingClientRect().left+40,b.getBoundingClientRect().top)})});
+
+// Corações
+function hearts(x,y){
+  if(still)return;
+  var s=['💗','💖','🌸','💕'];
+  for(var i=0;i<7;i++){
+    var e=document.createElement('span');e.className='heart';e.textContent=s[i%4];
+    e.style.left=x+'px';e.style.top=y+'px';e.style.setProperty('--dx',(Math.random()*160-80)+'px');
+    document.body.appendChild(e);setTimeout(function(el){el.remove()}.bind(null,e),1500);
+  }
+}
+
+// Foto
+document.getElementById('file').addEventListener('change',function(e){
+  var f=e.target.files[0];if(!f)return;
+  var r=new FileReader();r.onload=function(){
+    var i=document.getElementById('pic');i.src=r.result;i.hidden=false;document.getElementById('ini').hidden=true;
+  };r.readAsDataURL(f);
+});
+var frame=document.getElementById('frame');
+frame.addEventListener('click',function(e){hearts(e.clientX,e.clientY)});
+if(!still){
+  frame.addEventListener('mousemove',function(e){
+    var r=frame.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    frame.style.transform='rotateY('+(x*16)+'deg) rotateX('+(-y*16)+'deg)';
+  });
+  frame.addEventListener('mouseleave',function(){frame.style.transform=''});
+  document.addEventListener('mousemove',function(e){
+    var x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;
+    document.getElementById('b1').style.transform='translate('+(-x*60)+'px,'+(-y*60)+'px)';
+    document.getElementById('b2').style.transform='translate('+(x*60)+'px,'+(y*60)+'px)';
+  });
+}
+
+// E-mail e tema
+document.getElementById('copy').addEventListener('click',function(){
+  var m='yasminpossiano68@gmail.com';
+  try{navigator.clipboard.writeText(m).then(function(){toast('E-mail copiado')},function(){toast(m)})}catch(e){toast(m)}
+});
+var root=document.documentElement;
+document.getElementById('theme').addEventListener('click',function(){
+  var dark=getComputedStyle(root).getPropertyValue('--bg').trim()==='#241320';
+  root.setAttribute('data-theme',dark?'light':'dark');
+});
+
+// Barra de rolagem
+addEventListener('scroll',function(){
+  var d=document.documentElement,p=d.scrollTop/(d.scrollHeight-d.clientHeight||1);
+  document.getElementById('bar').style.width=(p*100)+'%';
+},{passive:true});
+
+// Contadores
+document.querySelectorAll('[data-n]').forEach(function(el){
+  var n=+el.dataset.n;if(still){el.textContent=n;return}
+  var i=0;var t=setInterval(function(){i++;el.textContent=i;if(i>=n)clearInterval(t)},260);
+});
+
+// Palavra que muda
+var words=['Ciência de Dados','Desenvolvimento de Sistemas','organização e finanças','trabalhar em equipe','aprender coisas novas'];
+var w=document.getElementById('word');
+if(still){w.textContent=words[0]}
+else{
+  var wi=0,ci=0,del=false;
+  (function tick(){
+    var cur=words[wi];
+    ci+=del?-1:1;w.textContent=cur.slice(0,ci);
+    var delay=del?35:75;
+    if(!del&&ci===cur.length){del=true;delay=1500}
+    else if(del&&ci===0){del=false;wi=(wi+1)%words.length;delay=300}
+    setTimeout(tick,delay);
+  })();
+}
+  </script>
+ </body>
+</html>
